@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const imagenes = [
-        "../media/imagenes/carousel1.jpg",
-        "../media/imagenes/carousel2.jpg",
-        "../media/imagenes/carousel3.jpg"
+        "media/imagenes/carousel1.jpg",
+        "media/imagenes/carousel2.jpg",
+        "media/imagenes/carousel3.jpg"
     ];
     
     const imagenDestacada = document.getElementById('imagen-destacada');
