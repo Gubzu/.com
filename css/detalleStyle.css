@@ -1,0 +1,262 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #e9eff5);
+    color: #333;
+}
+
+/* Contenedor principal del detalle */
+.detalle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 2rem auto;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+/* Columna izquierda: galería */
+.imagenes-galeria {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen principal */
+.imagen-principal {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.imagen-principal:hover {
+    transform: scale(1.02);
+}
+
+/* Miniaturas */
+.miniaturas {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.miniatura {
+    width: 60px;
+    height: 60px;
+    background-color: #d0d0d0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.miniatura:hover {
+    outline: 2px solid #1c62b9;
+    transform: scale(1.08);
+}
+
+/* Columna derecha: descripción */
+.info-producto {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-producto h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0rem;
+    color: #222;
+}
+
+.info-producto p {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    color: #555;
+    line-height: 1.6;
+}
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1c62b9;
+    margin: 0;
+}
+
+/* Botón de compra */
+.boton-comprar {
+    background-color: #1c62b9;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50%;
+}
+
+.boton-comprar:hover {
+    background-color: #154b8c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.boton-comprar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    color: #888;
+}
+
+/* Botón de WhatsApp flotante */
+.contacto-boton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+.contacto-boton:hover {
+    transform: scale(1.1);
+}
+
+.contacto-boton img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detalle-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .acciones-producto {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .boton-comprar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .icono-comprar {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+    .imagen-principal {
+        aspect-ratio: 1 / 1;
+    }
+}
+.boton-comprar {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    cursor: not-allowed;
+    display: inline-block;
+}
+
+.boton-comprar img.img-boton-compra {
+    max-width: 520px; /* puedes ajustar el tamaño */
+    height: 520px;
+    width: 520px;
+    display: block;
+}
+.contenedor-busqueda {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-top: 0%;
+  display: flex;
+  justify-content: center;
+}
+#buscador {
+  padding: 8px 16px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.detalles-tecnicos {
+    color: #333;
+    background: linear-gradient(135deg, #f9f9f9, #eaf0f6);
+    padding: 22px 28px;
+    border-radius: 14px;
+    margin-top: 24px;
+    max-width: 520px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    border-left: 6px solid #1c62b9;
+    transition: all 0.3s ease;
+}
+
+.detalles-tecnicos h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c62b9;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalles-tecnicos ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.detalles-tecnicos li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.detalles-tecnicos i {
+    color: #1c62b9;
+    min-width: 20px;
+    margin-top: 2px;
+}
+

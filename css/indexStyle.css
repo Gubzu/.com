@@ -1,0 +1,390 @@
+html{
+    font-size: 1.5em;
+}
+
+body{
+    margin: 0;
+    background-color: #e8f4f8;
+  
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    
+    position: relative;
+    z-index: 101; /* Para que esté por encima del header */
+    margin-left: 1rem;
+}
+
+.hamburger-line {
+    width: 2rem;
+    height: 0.25rem;
+    background: #1c62b9;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%; /* Reducido del 80% al 70% */
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
+    height: 100vh;
+    background-color: #f9f9f9;
+    transition: left 0.3s ease-in-out;
+    z-index: 5;
+    padding-top: 5rem;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.menu-navegacion.active {
+    left: 0;
+}
+
+.cerrar-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #1c62b9;
+    padding: 0 0.5rem;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navegacion li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-navegacion a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-navegacion a:hover {
+    color: #1c62b9;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Modifica estas reglas en tu archivo CSS */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 15vh; /* Altura del header */
+    min-height: 150px; /* Altura mínima para que no se haga muy pequeño */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-desplegable {
+    flex: 1; /* Ocupa espacio a la izquierda */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%; /* Aumentamos la altura permitida */
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 170%; /* Ahora usará el 100% del height del logo-link */
+    width: auto;
+    max-width: 600px; /* Aumentamos el máximo si es necesario */
+    max-height: 250px; /* Controlamos la altura máxima */
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+.destacado-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.navegacion-jabon{
+    padding: 2rem 3rem;
+}
+
+
+.busqueda {
+    border-radius: 0.5rem;
+    border: 2px solid #ccc; /* Añade un borde inicial */
+
+    padding: 0.5rem;    
+    margin: 0 auto;
+
+    display: block;
+    width: 20rem;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+.busqueda:focus{
+    border-color: #1c62b9;
+    outline: #1c62b9;
+}
+
+.categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 5%;
+
+
+    background-color: #eee;
+    border: 3px solid #ddd;
+    border-radius: 1rem;
+}
+
+.categoria-card{
+    margin: 3rem 0;
+    border: 2px solid #666;
+    width: 40vh;
+    height:40vh;
+    border-radius: 1rem;
+
+    background-color: #ccc;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-align: center;
+    font-size: 1.3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.categoria-card:hover{
+    background-color: #1c62b9;
+}
+
+.jabones{
+    background-image: url(../media/imagenes/achu.jpg);
+}
+
+.kits{
+    background-image: url(../media/imagenes/logo.jpg);
+}
+
+.mascarillas{
+    background-image: url(../media/imagenes/Konata\ glasses.png);
+}
+
+.sales-relajantes{
+    background-image: url(../media/imagenes/anNice.jpeg);
+}
+
+
+h2{
+    color: #1c62b9;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.contacto-boton {
+    position: fixed;  /* Hace que el botón sea fijo en la pantalla */
+    right: 20px;     /* Lo coloca a 20px del borde derecho */
+    bottom: 20px;    /* Lo coloca a 20px del borde inferior */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../media/imagenes/whatsappLogo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105% 110%;
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    cursor: pointer;  /* Cambia el cursor a mano al pasar por encima */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para mejor visibilidad */
+}
+.contacto-boton:hover {
+    transform: scale(1.05);  /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.2s ease;
+}
+/* Estilos para el carrusel de imágenes */
+.destacado-img {
+    width: 600px;
+    height: 490px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 200px; /* Mueve un poco hacia la izquierda */
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+#imagen-destacada {
+    height: 90vh;
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.puntos-navegacion {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punto.activo {
+    background-color: #1c62b9;
+}
+
+.punto:hover {
+    background-color: rgba(28, 98, 185, 0.7);
+}
+/* Estilos para las flechas de navegación */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.863);
+    padding: 10px 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+    background-color: rgba(32, 6, 104, 0.623);
+}
+
+.flecha-izquierda {
+    left: 190px;
+}
+
+.flecha-derecha {
+    right: 190px;
+}
+
+@media (max-width: 768px) {
+    .flecha {
+        display: none;
+    }
+}
+/* Mueve estas animaciones FUERA del media query */
+
+/* Animaciones para la sección de categorías */
+.animar-titulo {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecerDesdeAbajo 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.animar-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.categorias .animar-item {
+    animation: aparecerDesdeAbajo 0.8s ease-out forwards;
+    animation-delay: calc(var(--orden) * 0.15s);
+}
+
+@keyframes aparecerDesdeAbajo {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mejora para las tarjetas de categoría */
+.categoria-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.categoria-card p {
+    background-color: rgba(28, 99, 185, 0.925);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.categoria-card:hover p {
+    background-color: #64d464ea;
+}
+
+.animar-visible {
+    animation: aparecerDesdeAbajo 0.8s ease-out forwards;
+}
+
+/* Mantén el resto del media query para las flechas */
+@media (max-width: 768px) {
+    .flecha {
+        display: none;
+    }
+}

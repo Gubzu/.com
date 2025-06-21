@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>jabones</title>
+    <link rel="stylesheet" href="css/indexStylePro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital,wght@1,600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- HEADER CON HAMBURGUESA Y LOGO -->
+    <header>
+        <div class="menu-desplegable">  
+            <button class="hamburger" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="jabones.html">Jabones</a></li>
+                    <li><a href="Kits.html">Kits</a></li>
+                    <li><a href="sales relajantes.html">Sales Relajantes</a></li>
+                    <li><a href="preguntas frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="tiposdepiel.html">Tipos de piel</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573135089785&text=hola quiero comprar algo" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="index.html" class="logo-link">
+            <img src="media/imagenes/logo.png" alt="Logo Difun" class="logo-img">
+        </a>
+    </header>
+
+    <!-- BARRA DE BÚSQUEDA -->
+    <div class="contenedor-busqueda">
+        <input type="text" id="buscador" placeholder="Buscar productos..." autocomplete="off">
+        <div id="sugerencias" class="sugerencias"></div>
+    </div>
+<!-- BARRA SUPERIOR -->
+<nav class="nav-bar-superior">
+    <ul>
+        <li><a href="#categorias">Productos</a></li>
+        <li><a href="preguntas frecuentes.html">Preguntas Frecuentes</a></li>
+        <li><a href="sobre nosotros.html">Sobre nosotros</a></li>
+        <li><a href="tiposdepiel.html">Tipos de piel</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=573135089785&text=hola quiero comprar algo" target="_blank">Contacto</a></li>
+    </ul>
+    
+</nav>
+
+    <!-- CARRUSEL + TEXTO -->
+<div class="seccion-destacada">
+    <div class="destacado-img">
+        <div class="flecha flecha-izquierda">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="white"/>
+            </svg>
+        </div>
+        <img id="imagen-destacada" src="media/imagenes/carousel1.jpg" alt="Productos destacados">
+        <div class="flecha flecha-derecha">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="white"/>
+            </svg>
+        </div>
+        <div class="puntos-navegacion">
+            <span class="punto activo" data-imagen="1"></span>
+            <span class="punto" data-imagen="2"></span>
+            <span class="punto" data-imagen="3"></span>
+        </div>
+    </div>
+
+    <div class="texto-destacado">
+        <h2 class="bienvenido">Naturalmente tuyo</h2>
+        <p class="descripcion-destacada">Jabones artesanales, hechos a tu medida, especiales y elaborados con gran cuidado para cada tipo de piel. Nuestra misión principal es brindarte un producto de alta calidad que beneficie tu salud. Aquí encontrarás tu jabón favorito.</p>
+    </div>
+</div>
+
+
+    <!-- CATEGORÍAS -->
+     <section id="categorias" class="seccion-categorias-bg">
+  <!-- contenido de categorías -->
+</section>
+
+    <main>
+        <section class="seccion-categorias-bg">
+            <h2 class="categoria-titulo animar-titulo">Categorías</h2>
+            <section class="categorias">
+                <a href="html/jabones.html" class="animar-item" style="--orden: 1;">
+                    <div class="categoria-card jabones"><p>Jabones</p></div>
+                </a>
+                <a href="html/Kits.html" class="animar-item" style="--orden: 2;">
+                    <div class="categoria-card kits"><p>Kits</p></div>
+                </a>
+                <a href="html/sales relajantes.html" class="animar-item" style="--orden: 3;">
+                    <div class="categoria-card sales-relajantes"><p>Sales relajantes</p></div>
+                </a>
+            </section>
+        </section>
+    </main>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://api.whatsapp.com/send?phone=573135089785&text='hola quiero comprar algo'" target="_blank">
+        <div class="contacto-boton"></div>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="js/indexJS.js"></script>
+    <script src="js/barradebusqueda.js"></script>
+
+</body>
+</html>

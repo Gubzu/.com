@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Jabón Romero - Detalle</title>
+     <link rel="stylesheet" href="../css/detalleHeader.css">
+    <link rel="stylesheet" href="../css/detalleStyle.css">
+    <link rel="stylesheet" href="../css/categoriasStyle.css">
+    <link rel="stylesheet" href="../css/indexStylePro.css"> <!-- para el estilo de la barra de búsqueda -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu-desplegable">
+            <button class="hamburger" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="jabones.html">Jabones</a></li>
+                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="sales relajantes.html">Sales Relajantes</a></li>
+                    <li><a href="preguntas frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="tiposdepiel.html">Tipos de piel</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573217127549&text=hola quiero comprar algo" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="../index.html" class="logo-link">
+            <img src="../media/imagenes/logo.png" alt="Logo Difun" class="logo-img">
+        </a>
+    </header>
+
+    <!-- BARRA DE BÚSQUEDA IGUAL A INDEX -->
+    <div class="contenedor-busqueda">
+        <input type="text" id="buscador" placeholder="Buscar productos..." autocomplete="off">
+        <div id="sugerencias" class="sugerencias"></div>
+    </div>
+
+    <div class="detalle-container">
+        <div class="imagenes-galeria">
+            <div id="imagenPrincipal" class="imagen-principal" style="background-image: url('../media/imagenes/mita god.jpg');"></div>
+
+            <div class="miniaturas">
+                <div class="miniatura" style="background-image: url('../media/imagenes/Kuromi.png');"></div>
+                <div class="miniatura" style="background-image: url('../media/imagenes/kuromi2.jpg');"></div>
+                <div class="miniatura" style="background-image: url('../media/imagenes/kuromi3.jpg');"></div>
+                <div class="miniatura" style="background-image: url('../media/imagenes/kuromi4.jpg');"></div>
+            </div>
+        <!-- Detalles técnicos debajo de las miniaturas -->
+    <div class="detalles-tecnicos">
+    <h3><i class="fas fa-info-circle"></i> Información</h3>
+    <ul>
+        <li><i class="fas fa-truck"></i> <strong>Costo fijo domicilio:</strong> $15.000 COP (Cali, Colombia)</li>
+        <li><i class="fas fa-truck"></i> <strong>Costo fijo domicilio:</strong> $25.000 COP (Medellín, Colombia)</li>
+        <li><i class="fas fa-box-open"></i> <strong>Domicilio gratis:</strong> A partir de 3 unidades(Cali) y 5 unidades(Medellín)</li>
+        <li><i class="fas fa-user-md"></i> <strong>Tipos de piel recomendados:</strong> Grasa y mixta.</li>
+        <li><i class="fas fa-user-md"></i> <strong>Ingredientes:</strong> Extracto Árbol de té, Manteca de Cacao, Vitamina E.</li>
+        <li><i class="fas fa-clock"></i> <strong>Tiempo de entrega:</strong> 1 a 2 días hábiles para Cali (para Medellín puede variar según el servicio de paquetería)</li>
+    </ul>
+</div>
+</div>
+
+  <div class="info-producto">
+    <h1>Jabón Romero</h1>
+    <span class="precio">$19.900 COP</span>
+    <p>Estimula la circulación, combate el acné y mejora el tono de la piel. Contiene extracto de árbol de té y romero puro, lo que lo hace perfecto para piel grasa o con imperfecciones. También contiene vitamina E.</p>
+<div class="acciones-producto">
+        <button class="boton-comprar" disabled>
+  <img src="../media/imagenes/botondecompra.jpg" alt="Botón de compra" class="img-boton-compra">
+</button>
+
+</div>
+
+
+    <a href="https://api.whatsapp.com/send?phone=573135089785&text=Hola, quiero comprar un producto de su pagina web." target="_blank" aria-label="WhatsApp">
+    <div class="contacto-boton">
+    </div>
+</a>
+    <script src="../js/indexJS.js"></script>
+    <script src="../js/barradebusqueda.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imagenPrincipal = document.querySelector('.imagen-principal');
+            const miniaturas = document.querySelectorAll('.miniatura');
+
+            let ultimaMiniaturaClick = null;
+
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', () => {
+                    const imgPrincipal = imagenPrincipal.style.backgroundImage;
+                    const imgMiniatura = miniatura.style.backgroundImage;
+
+                    imagenPrincipal.style.backgroundImage = imgMiniatura;
+                    miniatura.style.backgroundImage = imgPrincipal;
+
+                    ultimaMiniaturaClick = miniatura;
+                });
+            });
+
+            imagenPrincipal.addEventListener('click', () => {
+                if (ultimaMiniaturaClick) {
+                    const imgPrincipal = imagenPrincipal.style.backgroundImage;
+                    const imgMiniatura = ultimaMiniaturaClick.style.backgroundImage;
+
+                    imagenPrincipal.style.backgroundImage = imgMiniatura;
+                    ultimaMiniaturaClick.style.backgroundImage = imgPrincipal;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
